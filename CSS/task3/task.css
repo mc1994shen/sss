@@ -1,0 +1,40 @@
+        body{
+            margin: 0;
+            background-color:rgb(104,205,213);
+            }
+       
+		
+		.sest{
+			color:rgb(255,255,255);
+			font-weight:bold;
+			text-align: center;
+			margin-left:3rem;
+			margin-right:3rem;
+			}
+		.logo{
+			padding-top:5rem;
+			padding-bottom:5rem;
+			text-align: center;
+			}
+        .box{
+            padding-top: 5rem;
+
+            
+        }
+        .option{
+            margin-left: 70px;
+			float: left;
+           text-align: center;
+            }
+        .option2{
+            margin-right: 70px;
+            text-align: center;
+            float:right;
+        }
+		.back{
+			padding-top:1rem;
+			padding-left:1rem;
+            }
+        .sest2{
+            color:rgb(255,255,255);
+        }
