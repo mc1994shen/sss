@@ -42,6 +42,8 @@ body{
     height: 50px;
     border: 0px;
     width: 79%;
+    outline:none;
+    font-size: 17px;
     /* position: relative;
     left: 30px; */
     }
