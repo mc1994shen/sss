@@ -1,75 +1,75 @@
-body{
+body {
     margin: 0;
-    background-color:rgb(239, 240, 244)
+    background-color:#eff0f4;
 
 }
-.text{
+.text {
     line-height:44px;
-    background-color: rgb(95, 192, 205);
+    background-color: #5fc0cd;
     text-align:center;
 }
-.title{
+.title {
     float: left;
     font-size:15px;
-    color:rgb(255, 255, 255);
+    color:#ffffff;
     padding-left: 14px;
 }
-.title2{
+.title2 {
     float: right;
     font-size:15px;
-    color:rgb(255, 255, 255);
+    color:#ffffff;
     padding-right: 14px;
 }
-.title3{
+.title3 {
     
     font-size:15px;
-    color:rgb(255, 255, 255);
+    color:#ffffff;
     
 }
 .box{
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     margin-top: 8px;
 }
-.xbox{
+.xbox {
     position: relative;
     top: 6px; 
     display: inline-block;
     padding-left: 22px;
     padding-right: 24px;
-    border-right: 2px solid rgb(234, 237, 238)
+    border-right: 2px solid #eaedee;
 }
-.inpu{
+.inpu {
     height: 50px;
     border: 0px;
     width: 79%;
     outline:none;
-    
+    /* font-size: 17px; */
     /* position: relative;
     left: 30px; */
     }
 input::-webkit-input-placeholder{
-    color:rgb(233, 236, 237);
+    color:#e1e5e7;
     font-size: 17px;
 }
-.land{
+.land {
     border: 0px;
     width: 100%;
     margin-top: 8px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 18px;
-    font-weight: bold;
-    background: rgb(95, 192, 205) ;
-    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background: #5fc0cd ;
+    color: #ffffff;
 }
-.pass{
+.pass {
     display: block;
     margin-top: 8px;
     margin-right: 8px;
     font-size: 15px;
     font-weight: 600;
     text-decoration: underline;
-    color: rgb(95, 192, 205);
+    color: #5fc0cd;
     float: right;
 }
 
