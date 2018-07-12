@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    background-color: #fff;
+}
+.topbox{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 43px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;    
+    background-color: #5fc0cd;
+     /* padding-bottom: 5px; */
+}
+.top1{
+    width: 1%;
+    padding: 1%;
+}
+.top2{
+    padding-left: 10px;
+}
+/* .top3{
+    max-width: 21px;
+    max-height: 22px;
+    background-image: url(./task6-1.png);
+    background-repeat: no-repeat;
+} */
+.topbutton1{
+    position: relative;
+    left: 3px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 71px;
+    /* float: left; */
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-right: 0px;
+    border: 1px solid #55a8b3;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #55a8b3;
+}
+.topbutton2{
+    position: relative;
+    right: 3px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 71px;
+    /* float: left; */
+    font-size: 16px;
+    font-weight: 700;
+    color: #5fc0cd;
+    border: 1px solid #fff;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #fff;
+}
+.toppicture{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 10px;
+    
+}
+
+.bottom{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;    
+    background-color: #f8fafb;
+}
+.bottombox1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    /* padding-top: 10px; */
+    padding-right: 40px;
+}
+.bottombox2{
+    padding-top: 6px;
+}
+
+.bottombox3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    /* padding-top: 10px; */
+    padding-left: 40px;
+}
+.bottomfont1{
+    font-size: 8px;
+    color: #5fc0cd;
+}
+.bottomfont2{
+    font-size: 8px;
+    color: #999999;
+}
+.screenbox{
+    position:fixed;
+    top: 43px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    /* text-align: center;
+    text-align-last: center;  */
+    border-bottom: 1px solid #e1e5e7;
+    height: 40px;
+}
+.screen1{
+    margin: 10px 0;
+    min-width: 32%;
+    max-width: 32%;
+    padding-left: 20px;
+    outline: none;
+    font-weight: 700;
+    color: #999999;
+    border: 0;
+    border-right: 2px solid #e1e5e7;
+}
+.screen2{
+    margin: 10px 0;
+    min-width: 35%;
+    padding-left: 32px;
+    outline: none;
+    font-weight: 700;  
+    color: #999999;
+    border: 0;
+}
+.screen3{
+    margin: 10px 0;
+    padding-left: 14px;
+    min-width: 32%;
+    max-width: 32%;
+    outline: none;
+    font-weight: 700;
+    color: #999999;
+    border: 0;
+    border-left: 2px solid #e1e5e7;
+}
+.paragraphbox{
+    /* display: flex;
+    flex-direction: column; */
+    background-image: url(./css_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -11px -8px;
+    border-bottom: 1px solid #e1e5e7;
+}
+.paragraphlastbox{
+    margin-bottom: 60px;
+    background-image: url(./css_sprites.png);
+    background-repeat: no-repeat;
+    background-position: -11px -8px;
+    border-bottom: 1px solid #e1e5e7;
+}
+.up{
+    padding-left: 27px;
+    padding-top: 15px;   
+    font-size: 12px;
+    font-weight: 700;
+    color: #999999;
+}
+.inbox{
+    
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 13px;
+}
+.incontent1{
+    padding-left: 27px;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+.incontent2{
+    width: 1%;
+    padding: 1%;
+    
+}
+.incontent3{
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #e63b0e;
+}
+.inpicture{
+    padding-left: 10px;
+}
+.lower{
+    padding-top: 11px;
+    padding-left: 27px;
+    padding-bottom: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #999999;
+}
+p{
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+}
+.mainbox{
+    position: absolute;
+    top: 86px;
+    bottom: 60px;
+    width: 100%;
+    overflow:auto;
+    overflow-x: hidden;
+}

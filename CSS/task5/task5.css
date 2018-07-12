@@ -57,6 +57,7 @@ body{
 .backdrop{
     
     background-image: url(./task5-1.png);
+    
     /* background-size: cover; */
     background-size: 100% 100%;
     /* background: no-repeat; */
