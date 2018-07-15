@@ -1,0 +1,109 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 1rem;
+    background-color: #29bde0;
+    
+}
+.topnavp{
+    margin: 0;
+    color: #fff;
+    font-size: 1.4rem;
+}
+.mainbox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #29bde0;
+}
+.mainp1{
+    margin: 0;
+    /* padding: 8rem 8rem; */
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 8rem;
+    padding-bottom: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    height: 4rem;
+    background-image: url(./task7-6.png);
+    background-repeat: no-repeat;
+    background-position: 3rem 1rem;
+}
+.mainp2{
+    padding: 1rem 3rem 1rem 3rem;
+    font-size: 1.7rem;
+    color: #ffc865;
+}
+.mainp3{
+    align-self: flex-start;
+    padding-left: 3rem;
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+.logbox{
+    padding: 0 2rem;
+    border-bottom: 0.1rem solid #ddd;
+}
+.logdiv{
+    display: flex;
+    justify-content: space-between;
+}
+.logp1{
+    font-size: 1.5rem;
+}
+.logp2{
+    margin: 0;
+    padding-top: 2rem;
+    color: #c7c7c7;
+    font-size: 1rem;
+}
+.logp3{
+    margin-top: 0;
+    color: #c7c7c7;
+    font-size: 1rem;
+}
+.bottombox{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(153, 223, 240, 0.5)
+}
+.bottombutton1{
+    height: 5rem;
+    width: 13rem;
+    border: 0;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background-color: #f66f6f;
+}
+.bottombutton2{
+    height: 5rem;
+    width: 13rem;
+    border: 0;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background-color: #fbb435;
+}
+.bottoma{
+    color: #fff;
+    text-decoration: none;
+}
