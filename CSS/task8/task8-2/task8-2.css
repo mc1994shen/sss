@@ -314,8 +314,16 @@ body,p{
 .main-in-hover1:hover{
     opacity: 1;
 }
-
-
+/* .main-hover-word1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1.4rem 0;
+} */
+.main-hover-word2{
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1.4rem 1.4rem;
+}
 
 
 .footerh{
