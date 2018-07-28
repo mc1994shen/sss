@@ -57,10 +57,7 @@ body{
 .backdrop{
     
     background-image: url(./task5-1.png);
-    
-    /* background-size: cover; */
     background-size: 100% 100%;
-    /* background: no-repeat; */
     height: 163px;
 
 }
@@ -68,8 +65,6 @@ body{
     position: relative;
     top: 40px;
     left: 15px;
-    
-
 }
 .p1{
     position: relative;
