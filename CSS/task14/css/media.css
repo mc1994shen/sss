@@ -1,0 +1,137 @@
+@media screen and (max-width: 992px) {
+    .header-top-box{
+        line-height: 0.3rem!important;
+    }
+    .header-top-word{
+        font-size: 0.1rem!important;
+    }
+    .header-top-picture{
+        width: 0.19rem!important;
+        height: 0.18rem!important;
+    }
+    .header-top-right{
+        font-size: 0.3rem!important;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .header-top-box{
+        line-height: 0.2rem!important;
+    }
+    .header-top-word{
+        font-size: 0.07rem!important;
+    }
+    .header-top-picture{
+        width: 0.13rem!important;
+        height: 0.12rem!important;
+    }
+    .header-top-right{
+        font-size: 0.2rem!important;
+    }
+}
+@media screen and (max-width:992px) and (min-width:768px){
+    .main-circle-word{
+        text-align: left;
+        width: 1.4rem;
+    }
+}
+@media screen and (max-width:425px){
+    .main-circle-word{
+        text-align: left;
+        width: 1.4rem;
+    }
+}
+@media screen and (max-width:1143px) {
+    .footer-top-row{
+        flex-flow: column wrap!important;
+        align-items: center;
+        height: 0.6rem;
+    }
+}
+@media screen and (max-width:544px){
+    .footer-top-row{
+        flex-flow: column wrap;
+        align-items: center;
+        height: 1.2rem;
+    }
+}
+@media screen and (max-width:870px){
+    .footer-left-box{
+        width: 100%;
+    }
+    .footer-middle-box{
+        margin-top: 0.2rem;
+    }
+    .footer-right-box{
+        margin-top: 0.2rem;
+    }
+}
+@media screen and (max-width:553px){
+    .footer-middle-box{
+        width: 100%;
+    }
+    .footer-right-box{
+        float: left!important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (max-width:550px){
+    .footer-left-box{
+        padding-right: 0.3rem;
+    }
+}
+@media screen and (max-width:490px){
+    .footer-right-box{
+       
+        float: left!important;
+    }
+}
+@media screen and (max-width:480px){
+    .footer-left-box{
+        padding-right: 0.2rem;
+    }
+}
+@media screen and (max-width:410px){
+    .footer-middle-box{
+       
+        padding-right: 1rem;
+    }
+    .footer-left-box{
+        padding-right: 0.3rem;
+    }
+}
+@media screen and (max-width:391px){
+    .footer-right-box{
+        padding-bottom: 0.2rem;
+    }
+}
+@media screen and (max-width:452px){
+    .footgb{
+        font-size: 0.06rem;
+    }
+}
+@media screen and (max-width:767px){
+    .navword2{
+        margin-top: 0.5rem;
+    }
+}
+@media screen and (max-width:762px){
+    
+    .footer-right-box{
+        padding-right: 0.15rem;
+    }
+} */

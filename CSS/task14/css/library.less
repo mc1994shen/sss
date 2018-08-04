@@ -1,0 +1,340 @@
+html{
+    font-size: 625%;
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+}
+@background-color:rgb(58,173,135);
+@li-height:0.3rem;
+@nav-header-padding:0.2rem;
+
+.clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+body{   
+    header{
+    .header-top-box{
+        line-height: 0.4rem;
+    }
+    .header-top-word{
+        font-size: 0.14rem;
+        color: #29b078;
+        float: left;
+    }
+    .header-top-right{
+        font-size: 0.4rem;
+        float: right;
+    }
+    .header-top-picture{
+        width: 0.25rem;
+        height: 0.24rem;
+    }
+    nav{
+        background-color: @background-color;
+        a{
+          color: white;
+          text-decoration: none;
+        }
+        li{
+          font-size: 0.16rem;
+        }
+        input[type="checkbox"]{
+          display: none;
+        }       
+        .nav-btn{
+          display: inline-block;
+          position: absolute;
+          right: 0.1rem;
+          top: 0.15rem;
+          border: 0.01rem solid white;
+          border-radius: 10%;
+          .nav-bar{
+            height: 0.04rem;
+            width: 0.3rem;
+            margin: 0.05rem;
+            background-color: white;
+          }
+        }
+        
+        .header-nav-box{
+          position: relative;
+          
+          .nav-header{
+            min-height: 0.6rem;
+            background-color: @background-color;
+          }
+          .header-nav-logo{ 
+            font-size: 0.4rem;
+            position: relative;
+            width: 2rem;
+            top: 0.08rem;
+            img{
+              width: 50%;
+              height: 50%;
+            }
+          }
+          .list-wrapper{
+            font-size: 0;
+            overflow: hidden;
+          }
+         
+          li{
+            color: white;
+            list-style: none;
+            text-align: center;
+            border-bottom: 0.01rem solid #29b078;
+          }
+        }
+        
+        
+        @media screen and (min-width:768px) {
+          .header-nav-box {
+            position: relative;
+           
+            .nav-btn{
+              display: none;
+            }
+            .nav-header{
+              float: left;
+            }
+            .header-nav-logo {
+              position: absolute;
+            //   top: 50%;
+            //   transform: translateY(-50%);
+              width: 2rem;
+              height: auto;
+              img {
+                width: 50%;
+                height: 50%;
+              }
+            }
+            .list-wrapper{
+              float: right;
+            }
+            ul {
+              position: relative;
+              float: right;
+              padding: 0;
+              margin: 0;
+              overflow: hidden;
+            }
+            li {
+              float: left;
+              line-height: 0.36rem;
+              padding: 0.1rem;
+              border-bottom: 0.04rem solid transparent;
+              color: white;
+              list-style: none;
+              cursor: pointer;
+              &:hover{
+                border-color: white;
+              }
+            }
+          }
+        }
+        
+        @media screen and (max-width:768px){
+          ul.drop-down{
+            transition: height 1s ease;
+            height: 0.97rem;
+            li{
+              cursor: pointer;
+            }
+            a{
+              vertical-align: -0.05rem;
+            }
+            li:hover  a{
+
+              color: #fff;
+            }
+            li:hover{
+              border-bottom: 0.01rem solid #fff;
+            }
+          }
+          input:checked ~ ul{
+            height: 0;
+          }
+        
+        }
+    }
+    .header-slider-contaner{
+      width:100%;
+      position:relative;
+      
+
+      .header-slider-item{
+      opacity:0;
+      width:100%;
+      position:absolute;
+      animation-timing-function: linear;
+      animation-name:fade;
+      animation-iteration-count: infinite;
+      background-size:100%;
+      }
+      .header-focus-container{
+      position:absolute;
+      z-index:7;
+      margin:0 auto;
+      width: 1rem;
+      left:0;
+      right:0;
+      }
+      .header-focus-container li{
+      width:0.1rem;
+      height:0.1rem;
+      border-radius:50%;
+      font-size: 0;
+      float:left;
+      margin-right:0.05rem;
+      margin-left: 0.05rem;
+      background:#fff;
+      }
+      .header-focus-item{
+      width:100%;
+      height:100%;
+      border-radius:inherit;
+      animation-timing-function: linear;
+      animation-name:fade;
+      animation-iteration-count: infinite;
+      }
+      .focus-item2,.focus-item3,.focus-item4,.focus-item5{
+      opacity:0;
+      }
+    
+      /*设置轮播焦点的位置*/
+      .header-focus-container{
+      bottom:2%;
+      }
+      /*设置当前图片焦点的颜色*/
+      .header-focus-item{
+      background:#51B1D9;
+      }
+      /*设置动画，请根据实际需要修改秒数*/
+      .header-slider-item,.header-focus-item{
+      animation-duration: 20s;
+      }
+      .slider-item1,.focus-item1{
+      animation-delay: -1s;
+      }
+      .slider-item2,.focus-item2{
+      animation-delay: 3s;
+      }
+      .slider-item3,.focus-item3{
+      animation-delay: 7s;
+      }
+      .slider-item4,.focus-item4{
+      animation-delay: 11s;
+      }
+      .slider-item5,.focus-item5{
+      animation-delay: 15s;
+      }
+      @keyframes fade{
+      0%{
+      opacity:0;
+      z-index:2;
+      }
+      5%{
+      opacity:1;
+      z-index: 1;
+      }
+      20%{
+      opacity:1;
+      z-index:1;
+      }
+      25%{
+      opacity:0;
+      z-index:0;
+      }
+      100%{
+      opacity:0;
+      z-index:0;
+      }
+      }
+      /*设置背景，响应式请利用媒体查询根据断点修改路径*/
+      .slider-item1{
+      background-image:url(../../task8/task8-1.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      }
+      .slider-item2{
+      background-image:url(../../task8/picture-1.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      }
+      .slider-item3{
+      background-image:url(../../task8/picture-2.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      }
+      .slider-item4{
+      background-image:url(../../task8/task8-1.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      }
+      .slider-item5{
+      background-image:url(../../task8/picture-2.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      }
+      /*设置图片的高度，请根据具体需要修改百分比，响应式及时修改此值*/
+      .header-slider,.header-slider-item{
+        font-size: 0;
+      padding-bottom:31%;
+      }
+    }
+  }
+  footer{
+    .footer-foot-box{
+      padding-top: 0.2rem;
+      background-color: #26a26f;
+    .footer-left-box{
+        float: left;
+        padding-right: 0.5rem;
+    }
+
+    .footer-middle-box{
+        float: left;
+    }
+    .footer-right-box{
+      font-size: 0;
+        float: right;
+    }
+    .foottitle{
+        font-size: 0.16rem;
+    }
+    .footcolor{
+        text-decoration: none;
+        font-size: 0.16rem;
+        font-weight: 700;
+        color: #fff;
+    }
+    .footair{
+        padding:0.34rem;
+    }
+    .footnetbox{
+        font-size: 0.14rem;
+        padding-top: 0.17rem;
+        padding-bottom: 0.17rem;
+    }
+    .footnet:hover{
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 0.01rem solid #fff;
+    }
+    }
+
+    .footgb{
+        border-top: 0.01rem solid #32c086;
+        text-align: center;
+        background-color: #26a26f;
+        color: #fff;
+        font-size: 0.12rem;
+    }
+  }
+}

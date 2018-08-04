@@ -130,22 +130,12 @@ p {
     font-size: 1.4rem;
     font-weight: 700;
 }
-.maincirclebox1{
-    /* padding-right: 5%;
-    padding-left: 5%; */
-    /* min-width: 109.8rem; */
-}
-/* @media screen and (max-width:1115px){
-    .maincirclebox1{
-        min-width: 0;
-    }
-} */
+
 .maincirclebox2{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    /* padding: 0 0.2rem; */
 }
 .maincircle1{
     width: 2.6rem;
@@ -176,11 +166,9 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
 }
-/* .mainshowbox{
-    
-    padding-right: 5%;
-    padding-left: 5%;
-} */
+.mainshowbox3{
+    padding:1rem 1rem;
+    }
 .mainshowbox2{
     
     padding-top: 2rem;
@@ -202,9 +190,7 @@ p {
     font-size: 1.6rem;
     font-weight: 700;
 }
-.mainshowbox3{
-    padding:1rem 1rem;
-    }
+
 .mainbottomp23{
     margin-bottom: 0.7rem;
     margin-left: 0.7rem;
@@ -306,29 +292,21 @@ p {
     width: 20rem;
     height: 16rem;
 }
+.footerdiv{
+    background-color: #fff;
+    padding-bottom: 1rem;
+}
 .footerh{
     padding-top: 2rem;
     padding-bottom: 1rem;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
-    
-}
-.xxxx1{
-    background-color: #fff;
-}
-
-.footerdiv{
-    background-color: #fff;
-    padding-bottom: 1rem;
-    
 }
 .footerul{
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
-    
-    
 }
 .footerli{
     padding-bottom: 0.2rem;
@@ -381,9 +359,6 @@ p {
     
     padding-top: 1.7rem;
     padding-bottom: 1.7rem;
-}
-.foot3322{
-    background-color: #26a26f;
 }
 .footnet:hover{
     text-decoration: none;
