@@ -74,11 +74,6 @@ main .main-cover-1 .main-introduce-box {
   border: 0.01rem solid #eeeded;
   background-color: #fff;
   margin-top: 0.2rem;
-  /* .main-hover-word1{
-                font-size: 1.4rem;
-                font-weight: 700;
-                padding: 1.4rem 0;
-            } */
 }
 main .main-cover-1 .main-introduce-box .main-introduce-top {
   display: flex;
@@ -235,6 +230,11 @@ main .main-cover-1 .main-introduce-box .main-in-hover1 {
 }
 main .main-cover-1 .main-introduce-box .main-in-hover1:hover {
   opacity: 1;
+}
+main .main-cover-1 .main-introduce-box .main-hover-word1 {
+  font-size: 0.2rem;
+  font-weight: 700;
+  padding: 0.14rem 0;
 }
 main .main-cover-1 .main-introduce-box .main-hover-word2 {
   font-size: 0.14rem;

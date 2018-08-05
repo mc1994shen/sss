@@ -245,3 +245,8 @@ body footer .footer-top-box .footer-top-row .shezhi1 {
 body footer .footer-top-box .footer-top-row .shezhi1:hover {
   border-bottom: 0.01rem solid #26a26f;
 }
+@media screen and (max-width: 546px) {
+  body footer .footer-top-box .footer-top-row .shezhi {
+    width: 1rem;
+  }
+}
