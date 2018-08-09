@@ -1,67 +1,48 @@
-// function Button () {
+
+
+function Shuffle(a) {
     
-//     var x = Math.floor(Math.random()*9);
-//     var y = Math.floor(Math.random()*9);
-//     var z = Math.floor(Math.random()*9);
-//     var abc = document.getElementsByClassName('main-grid')
-//     for(var i = 0 ;i < abc.length; i++){
-//         abc[i].style.backgroundColor = '#ff8c00';
-//     }
-//     abc[x].style.backgroundColor='red';
-//     abc[y].style.backgroundColor='red';
-//     abc[z].style.backgroundColor='red';
-//     console.log(Math.random()*9)
-// };
-// 乱序/洗牌
-function shuffle(a) {
     var length = a.length;
-    var shuffled = new Array(length);
-    for (var i = 0,rand; i < length; i++) {
-        rand = Math.floor(Math.random() * ( i + 1 ));
-        if (rand !== i) {
-            shuffled[i] = shuffled[rand];
-        }
-        shuffled[rand] = a[i];
+    for(var i = length - 1, rand;i >= 0; i--){
+        rand = Math.floor(Math.random()*(i+1))
+        var p = a[i];
+        a[i] = a[rand];
+        a[rand] = p ;  
     }
-    return shuffled;
 }
-// 随机颜色
-function randomlyColor() {
-    var red, blue, green;
+a = [0,1,2,3,4,5,6,7,8];
+Shuffle(a);
+function randomlyColor(){
+    var red,blue,green;
     red = Math.floor(Math.random() * 256);
     do {
         green = Math.floor(Math.random() * 256);
     } while (green == red);
     do {
         blue = Math.floor(Math.random() * 256);
-    } while (blue == red || blue == green);
-    return ("rgb(" + red + "," + green + "," + blue + ")");
+    }while(blue == red || blue == green);
+    return("rgb(" + red + "," + green + "," + blue + ")");
 }
-function changeColor() {
-    var units = new Array();
-    //初始化颜色
-    var i;
-    units = document.getElementsByClassName("grid");
-    for (i = 0; i < units.length; i++) {
-        units[i].style.backgroundColor = "rgb(255,140,0)";
+function clear(){
+    var units = document.getElementsByClassName("grid");
+    for(var i = 0; i < units.length;i++){
+        units[i].style.backgroundColor = "#ff8c00";
     }
-    //随机3盒子
-    units = shuffle(document.getElementsByClassName("grid")).slice(0,3);
-    //分配颜色
-    for (i in units) {
-        units[i].style.backgroundColor = randomlyColor();
-    }
-    units = document.getElementsByClassName("grid");
+    units[a.slice(0,3)[0]].style.backgroundColor = randomlyColor();
+    units[a.slice(0,3)[1]].style.backgroundColor = randomlyColor();
+    units[a.slice(0,3)[2]].style.backgroundColor = randomlyColor();
+    console.log(a.slice(0,3)[0],a.slice(0,3)[1],a.slice(0,3)[2])
 }
 function Timer() {
-    changeColor();
+    Shuffle(a);
+    clear();
     t = setTimeout("Timer()",1000);
 }
 function start() {
-    if (status == 0) {
+    if (status == 0){
         Timer();
         status = 1;
-    } else {
+    }else {
         return;
     }
 }
@@ -69,8 +50,7 @@ function end() {
     clearTimeout(t);
     status = 0;
     units = document.getElementsByClassName("grid");
-    for (i = 0; i < units.length; i++) {
-        units[i].style.backgroundColor = "rgb(255,140,0)";
+    for (i = 0;i < units.length;i++){
+        units[i].style.backgroundColor = "#ff8c00";
     }
 }
-var status = 0;
