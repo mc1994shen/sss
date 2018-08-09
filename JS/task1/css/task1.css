@@ -1,0 +1,46 @@
+html {
+  font-size: 625%;
+}
+html * {
+  margin: 0;
+  padding: 0;
+}
+.clearfix::before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+body {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+body main .main-grid-box {
+  display: flex;
+  justify-content: space-between;
+}
+body main .main-grid-box .grid {
+  width: 30%;
+  padding-top: 30%;
+  float: left;
+  margin: 1%;
+  border-radius: 10%;
+  background-color: #ff8c00;
+}
+body footer button {
+  margin: 1%;
+  display: block;
+  width: 98%;
+  padding: 3% 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.05rem;
+  border: 0.01rem solid #ff8c00;
+  color: #ff8c00;
+  background-color: #fff;
+}
