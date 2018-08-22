@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设置参数</title>
+    <link rel="stylesheet" href="../css/task2-2.css">
+</head>
+<body>
+    <header>
+        <div class="container header-top-box">
+            <a class="header-left-back" onclick="BackOff()"></a>
+            <h1 class="header-in-title">设置参数</h1>
+            <a class="header-right-help" href=""></a>
+        </div>
+    </header>
+    <main>
+        <div class="main-top-box container">
+            <h2 class="top-left-title">
+                玩家配比
+            </h2>
+            <div class="top-right-box">
+                <div class="top-right-upper clearfix">
+                    <ul id="list" class="upper-player">
+
+                    </ul>
+                </div>
+                <button class="top-right-lower" onclick="PlayerRatio()">
+                    点击设置
+                </button>
+            </div>
+        </div>
+        <div class="main-in-box container">
+            <input class="in-upper-input" type="text" placeholder="水民词组">
+            <input class="in-lower-input" type="text" placeholder="杀手词组">
+        </div>
+        <div class="main-bottom-box container">
+            <div class="bottom-upper-box">
+                玩家人数
+                <input class="bottom-upper-people" type="text" id="TextNumber" value="4">
+                人
+            </div>
+            <div class="bottom-lower-box">
+                <input class="bottom-lower-plus" type="button" onclick="Btnsub()">
+                <input class="bottom-lower-slider" type="range" id="RangeNumber" value="4" min="4" max="18" step="1">
+                <input class="bottom-lower-minus" type="button" onclick="BtnAdd()">
+            </div>
+        </div>
+    </main>
+    <footer class="container">
+        <button class="footer-button-start" onclick="Start()">来一发</button>
+    </footer>
+    <script src="../js/task2-2.js"></script>
+</body>
+</html>
