@@ -5,14 +5,22 @@ let diaryColor = JSON.parse(window.sessionStorage.getItem("diarycolor"));
 let activation = JSON.parse(window.sessionStorage.getItem("activation"));
 let toDay = JSON.parse(window.sessionStorage.getItem("today"));
 let Die = JSON.parse(window.sessionStorage.getItem("Die"));
+let Journal = JSON.parse(window.sessionStorage.getItem("journal"));
 console.log(Player);
 //根据点击次数修改样式
-if (Click == 0) {
-    $(".header-nav-word").html("杀手开杀");
-    $(".header-in-word").html("天黑请闭眼，杀手睁眼");
+
+if (Journal.length !== 1) {
+    if (Click == 0) {
+        $(".header-nav-word").html("杀手开杀");
+        $(".header-in-word").html("天黑请闭眼，杀手睁眼");
+    } else {
+        $(".header-nav-word").html("全民投票");
+        $(".header-in-word").html("快投，赶下一场");
+    }
 } else {
-    $(".header-nav-word").html("全民投票");
-    $(".header-in-word").html("快投，赶下一场");
+    $(".header-nav-word").html("战况表");
+    $(".header-in-word").html("死的就这些，赶快返回");
+    $(".footer-choice-jump").html("返回");
 }
 //console.log(Click.length);
 //循环添加标签及标签样式
@@ -46,24 +54,30 @@ $(".main-square-box").click(function () {
     for (let l = 0; l < Player.length; l++) {
         $(".main-square-identity").eq(l).removeClass("mainRed");
     }
-    //判断杀人或投票界面
-    if ((Click.length - 1) == 0) {
-        //判断是否是平民，是否存活
-        if (Player[s].name == "平民" && Player[s].death == true) {
-            $(".main-square-identity").eq(s).addClass("mainRed");
-            //点击死人弹窗
-        } else if (Player[s].death !== true) {
-            alert("鞭尸人品减一")
-            //杀人界面不能点击杀手
+    if (Journal.length !== 1) {
+        //判断杀人或投票界面
+        if ((Click.length - 1) == 0) {
+            //判断是否是平民，是否存活
+            if (Player[s].name == "平民" && Player[s].death == true) {
+                $(".main-square-identity").eq(s).addClass("mainRed");
+                //点击死人弹窗
+            } else if (Player[s].death !== true) {
+                alert("鞭尸人品减一")
+                //杀人界面不能点击杀手
+            } else {
+                alert("兄弟自己人！");
+            }
+            //投票逻辑
         } else {
-            alert("兄弟自己人！");
+            if (Player[s].death == true) {
+                $(".main-square-identity").eq(s).addClass("mainRed");
+            } else {
+                alert("鞭尸人品减一")
+            }
         }
-        //投票逻辑
     } else {
-        if (Player[s].death == true) {
-            $(".main-square-identity").eq(s).addClass("mainRed");
-        } else {
-            alert("鞭尸人品减一")
+        for (let l = 0; l < Player.length; l++) {
+            $(".main-square-identity").eq(l).removeClass("mainRed");
         }
     }
 })
@@ -88,7 +102,7 @@ function Winjump() {
         JumpStorage();
         let win = "杀手胜利";
         //如果杀人页面胜利则增加天数
-        if((Click.length - 1) == 0){
+        if ((Click.length - 1) == 0) {
             toDay.push(0);
             sessionStorage.setItem("today", JSON.stringify(toDay));
         }
@@ -119,27 +133,38 @@ function JumpStorage() {
 }
 //选中杀或投的后点击跳转
 $(".footer-choice-jump").click(function () {
-    //判断第几次点击，第一次则附加必须选中平民才可
-    if (clickNumber !== undefined && (Click.length - 1) == 0 && Player[clickNumber].name == "平民" && Player[clickNumber].death == true) {
-        //关联按钮操作
-        JumpOperation();
-        //关联存储
-        JumpStorage();
-        //存活组
-        Winjump();
-        //投票页面
-    } else if (clickNumber !== undefined && (Click.length - 1) == 3 && Player[clickNumber].death == true) {
-        //增加天数
-        toDay.push(0);
-        //清空点击
-        Click.splice(0, Click.length);
-        JumpOperation();
-        JumpStorage();
-        Winjump();
+    if (Journal.length !== 1) {
+        //判断第几次点击，第一次则附加必须选中平民才可
+        if (clickNumber !== undefined && (Click.length - 1) == 0 && Player[clickNumber].name == "平民" && Player[clickNumber].death == true) {
+            //关联按钮操作
+            JumpOperation();
+            //关联存储
+            JumpStorage();
+            //存活组
+            Winjump();
+            //投票页面
+        } else if (clickNumber !== undefined && (Click.length - 1) == 3 && Player[clickNumber].death == true) {
+            //增加天数
+            toDay.push(0);
+            //清空点击
+            Click.splice(0, Click.length);
+            JumpOperation();
+            JumpStorage();
+            Winjump();
+        } else {
+            alert("?还没选人你就点");
+        }
     } else {
-        alert("?还没选人你就点");
+        if (Journal.length == 1) {
+            JumpStorage();
+            Journal.splice(0, Journal.length);
+            sessionStorage.setItem("journal", JSON.stringify(Journal));
+            window.location.href = "../html/task4-1.html";
+        }
     }
+
 })
+
 //回到操作页
 $(".header-top-box").click(function () {
     JumpStorage();

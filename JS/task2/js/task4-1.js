@@ -26,8 +26,6 @@ for (let y = 1; y < toDay.length; y++) {
 for (let t = 1; t <= toDay.length; t++) {
     $(".mainToDayNumber").eq(t - 1).html("第" + t + "天");
 }
-console.log(toDay.length - 2);
-
 //第二天开始前一天操作隐藏
 
 $(".mainOperate").eq(toDay.length - 1).show();
@@ -145,9 +143,19 @@ $(".buttonBox").eq(toDay.length * 4 - 1).click(function () {
         alert("老哥按顺序来!");
     }
 })
+
+if (JSON.parse(window.sessionStorage.getItem("journal"))) {
+    Journal = JSON.parse(window.sessionStorage.getItem("journal"));
+} else {
+    //创建一个空数组
+    Journal = new Array();
+    sessionStorage.setItem("journal", JSON.stringify(Journal));
+}
 //查看日志
 $(".footerLog").click(function () {
     StorageJume();
+    Journal.push(0);
+    sessionStorage.setItem("journal", JSON.stringify(Journal));
     window.location.href = "../html/task4-2.html";
 })
 //关闭时弹窗询问是否关闭，确定则跳转并清空数据

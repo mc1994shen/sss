@@ -5,10 +5,10 @@ let toDay = JSON.parse(window.sessionStorage.getItem("today"));
 let Alive = JSON.parse(window.sessionStorage.getItem("alive"));
 let KillerNumber = JSON.parse(window.sessionStorage.getItem("KillerNumber"));
 $(".main-result-picture").text(Win);
-$(".main-result-detailed").eq(1).text('杀手还有' + KillerNumber.length +'人 , 平民还有' + (Alive.length - KillerNumber.length) + '人');
+$(".main-result-detailed").eq(1).text('杀手还有' + KillerNumber.length + '人 , 平民还有' + (Alive.length - KillerNumber.length) + '人');
 console.log(toDay.length)
 
-for(let i = 2;i < toDay.length; i++){
+for (let i = 2; i < toDay.length; i++) {
     $(".main-log-box").first().clone().prependTo($('.package'))
 }
 //修改天数
