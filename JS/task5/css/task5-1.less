@@ -1,0 +1,70 @@
+html{
+    font-size: 625%;
+    body,h1,p{
+        margin: 0;
+    }
+}
+body{
+    //background: url(../img/two.jpg) no-repeat fixed center;
+    background-color: #c7c7c7;
+    background-size: 0 0;
+    position: relative;
+    transition: background-size 2s;
+     &:hover{
+         background-size: 100% 100%;
+    }
+    
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    .Landbox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 0.1rem;
+        background-color: rgba(255,255,255,0.6);
+    }
+    .Landframe{
+        margin-top: 0.05rem;
+        text-align: center;
+        font-size: 0.2rem;
+    }
+    .Landname{
+        width: 80%;
+        margin: 0.05rem 0;
+        color: blue;
+        outline: none;
+        border: 0;
+        background-color: rgba(255, 255, 255, 0.3)
+    }
+    .Landkey{
+        width: 80%;
+        margin: 0.05rem 0;
+        color:blue;
+        outline: none;
+        border: 0;
+        background-color: rgba(255, 255, 255, 0.3)
+    }
+    .prompt{
+
+        height: 0.218rem;
+        font-size: 0.14rem;
+        font-weight: 700;
+        color: red;
+    }
+    .Landbutton{
+        width: 80%;
+        line-height: 0.3rem;
+        background-color: rgba(30, 253, 0,0.3);
+        font-size: 0.17rem;
+        font-weight: 700;
+        color: #000;
+        border: 0;
+        border-radius: 0.1rem;
+    }
+}

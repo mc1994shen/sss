@@ -88,6 +88,11 @@ body main {
 body main .mainRedBorder {
   border-color: red;
 }
+body main .disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
 body main .main-square-box {
   width: 24vw;
   height: 24vw;

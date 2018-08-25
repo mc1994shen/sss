@@ -7,21 +7,7 @@ let toDay = JSON.parse(window.sessionStorage.getItem("today"));
 let Die = JSON.parse(window.sessionStorage.getItem("Die"));
 let Journal = JSON.parse(window.sessionStorage.getItem("journal"));
 console.log(Player);
-//根据点击次数修改样式
 
-if (Journal.length !== 1) {
-    if (Click == 0) {
-        $(".header-nav-word").html("杀手开杀");
-        $(".header-in-word").html("天黑请闭眼，杀手睁眼");
-    } else {
-        $(".header-nav-word").html("全民投票");
-        $(".header-in-word").html("快投，赶下一场");
-    }
-} else {
-    $(".header-nav-word").html("战况表");
-    $(".header-in-word").html("死的就这些，赶快返回");
-    $(".footer-choice-jump").html("返回");
-}
 //console.log(Click.length);
 //循环添加标签及标签样式
 for (let i = 0; i < Player.length; i++) {
@@ -35,6 +21,24 @@ for (let i = 0; i < Player.length; i++) {
     $(".main-square-box").eq(i).append('<p class="main-square-number">p>');
     //给玩家号数p标签添加对应数字
     $(".main-square-number").eq(i).html((i + 1) + "号");
+}
+//根据点击次数修改样式
+if (Journal.length !== 1) {
+    if (Click == 0) {
+        $(".header-nav-word").html("杀手开杀");
+        $(".header-in-word").html("天黑请闭眼，杀手睁眼");
+    } else {
+        $(".header-nav-word").html("全民投票");
+        $(".header-in-word").html("快投，赶下一场");
+    }
+} else {
+    $(".header-nav-word").html("战况表");
+    $(".header-in-word").html("死的就这些，赶快返回");
+    $(".header-bottom-word").html(" ");
+    $(".footer-choice-jump").html("返回");
+    for (let l = 0; l < Player.length; l++) {
+        $(".main-square-box").eq(l).addClass("disabled");
+    }
 }
 //给亡者上色
 for (let b = 0; b < Player.length; b++) {
