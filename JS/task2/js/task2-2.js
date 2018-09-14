@@ -51,6 +51,7 @@ function PlayerRatio() {
     }
     if (peopleNumber < 4 || peopleNumber > 18) {
         alert("都弹窗提醒了还弄错人数？")
+        r = 0
     } else {
         //添加杀手
         for (var i = 0; i < killerNumber; i++) {
@@ -89,8 +90,7 @@ function Start() {
     var civilianNumber = peopleNumber - killerNumber;
     if (r == 0) {
         alert("不设置人数一发都来不了");
-    }
-    else {
+    }else {
         //创建空数组all
         var all = [];
         //将杀手加入数组
