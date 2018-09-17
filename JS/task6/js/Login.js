@@ -2,15 +2,13 @@
 myApp.controller('LoginController', function ($scope, $http, $state, $timeout) {
 
     if (window.sessionStorage.getItem("retreat") == undefined) {
-        
-
         history.pushState(null, null, document.URL);
         window.addEventListener('popstate', function () {
             history.pushState(null, null, document.URL);
         });
     }
 
-
+    
     //登陆点击事件
     $scope.LoginKey = function () {
         //angular请求写法

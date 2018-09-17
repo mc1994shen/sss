@@ -409,6 +409,7 @@ myApp.controller('ArticleController', function ($scope, $http, $state, $statePar
             $scope.defeated = true;
         })
     }
+    
     //删除
     $scope.delbutton = function () {
         document.getElementById("portrait").src = "";
