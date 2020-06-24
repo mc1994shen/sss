@@ -1,3 +1,3 @@
 window.addEventListener('offline', ()=>{
-    alert("断网拉")
+    document.querySelector('div').innerHTML("断网了")
 })
